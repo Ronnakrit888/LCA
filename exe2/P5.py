@@ -29,11 +29,3 @@ def gauss_jordan(matrix1, matrix2):
     result_matrix = [row[cols1:] for row in augmented_matrix]
     return result_matrix
 
-A = [[4, 1, 1],  # row 1
-     [1, 2, -2], # row 2
-     [1, 2, 3]]  # row 3
-
-b = [[6], [9], [10]]
-
-result = gauss_jordan(A, b)
-print(result)

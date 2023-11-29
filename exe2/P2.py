@@ -4,9 +4,9 @@ def matdot(matrixA, matrixB):
     rows2, cols2 = len(matrixB), len(matrixB[0])
    
     if cols1 != rows2:
-        return "None"
+        return None
     
-    result = [[0 for _ in range(rows1)] for _ in range(cols2)]
+    result = [[0 for _ in range(cols2)] for _ in range(rows1)]
     
     for i in range(rows1):
         for j in range(cols2):
@@ -16,12 +16,9 @@ def matdot(matrixA, matrixB):
     return result
 
 
-A = [[ 1, 2, 3], 
-     [-1, 0, 4]]
+A = [[1, 2, 3], [-1 , 0 , 4]]
+B = [[10, 20], [5, -2], [7, 9]]
+M = [[8], [6]]
 
-B = [[10, 20], 
-     [5,  -2], 
-     [7,   9]]
-
-AB = matdot(A, B)
-print("A dot B =", AB)
+print(matdot(A, B))
+print(matdot(A, M))

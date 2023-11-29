@@ -4,7 +4,6 @@ def factorial(num):
     else:
         return (num * factorial(num - 1))
 
-print(factorial(4))
 
 
 

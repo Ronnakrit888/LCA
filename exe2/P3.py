@@ -20,8 +20,3 @@ def determinant(matrix):
 
     return det
     
-A = [[3,  4, 5],
-     [1, -1, 0],
-     [8,  2, 7]]
-
-print(determinant(A))

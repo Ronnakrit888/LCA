@@ -11,9 +11,3 @@ def transpose(matrix):
     return result
 
 A = [[1,2,3,4],[5,6,7,8]]
-
-At = transpose(A)
-
-print(A)
-print("is transposed to")
-print(At)
