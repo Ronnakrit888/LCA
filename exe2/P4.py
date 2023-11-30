@@ -1,10 +1,17 @@
 
-def swoprow(matrix, row1, row2):
-    matrix[row1] = matrix[row2]
-    matrix[row2] = matrix[row1] 
+def swoprow(matrix, i, j):
+    row = len(matrix)
+    if 0 <= i < row and 0 <= j < row:
+        if i != j:
+            matrix = [row[:] for row in matrix]
+            matrix[i], matrix[j] = matrix[j], matrix[i] 
     
     return matrix
 
-A = [[0, 23, 6, 8, 1], [1, 3, 5, 7, 16], [2, 4, 6, 8, 9], [25, 66, 2, 5, 19], [-1, -2, -3, -5, 8]]
-
-print(swoprow(A, 2, 0))
+if __name__ == '__main__':  
+    A = [[1,2,3,4], [5,6,7,8], [9,10,11,12], [-1, -2, -3, -4]]  
+    print(A)  
+    print('After swop')  
+    Ap = swoprow(A, 0, 3)  
+    print('A=', A)  
+    print("A'=", Ap)

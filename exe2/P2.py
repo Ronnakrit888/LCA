@@ -10,15 +10,23 @@ def matdot(matrixA, matrixB):
     
     for i in range(rows1):
         for j in range(cols2):
-            for k in range(cols1):
+            for k in range(rows2):
                 result[i][j] += matrixA[i][k] * matrixB[k][j]
             
     return result
 
 
-A = [[1, 2, 3], [-1 , 0 , 4]]
-B = [[10, 20], [5, -2], [7, 9]]
-M = [[8], [6]]
-
-print(matdot(A, B))
-print(matdot(A, M))
+if __name__ == '__main__':  
+    A = [[1, 2, 3], [-1, 0, 4]] 
+    B = [[10, 20], [5, -2], [7, 9]]  
+    M = [[8], [6]]  
+    AB = matdot(A, B)  
+    BA = matdot(B, A)  
+    AM = matdot(A, M)  
+    BM = matdot(B, M)  
+    print('A=', A)  
+    print('B=', B)  
+    print('A dot B =', AB)  
+    print('B dot A =', BA)  
+    print('A dot M =', AM)  
+    print('B dot M =', BM)
